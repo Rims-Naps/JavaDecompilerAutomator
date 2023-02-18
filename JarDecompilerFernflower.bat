@@ -1,0 +1,1 @@
+for %%f in (.\*.jar) do java -jar ".\lib\fernflower-2.5.0.Final.jar"  ".\%%f" ".\FernFlower" >logsFernflower.txt
