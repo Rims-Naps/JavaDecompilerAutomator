@@ -1,0 +1,2 @@
+# JavaDecompilerAutomator
+Decompiles Jars Automatically
