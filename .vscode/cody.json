@@ -1,0 +1,222 @@
+{
+  "commands": {
+    "recent-changes": {
+      "description": "recent-changes",
+      "prompt": "Summarize the given git changes in 3-5 sentences and provide a list of the most recent commits. The list should include commit hash, subject line and author for each commit.",
+      "context": {
+        "command": "git log -10 --pretty=format:'%h - %an: %s' --stat",
+        "selection": false
+      }
+    },
+    "batch-script-gradle": {
+      "description": "batch-script-gradle",
+      "prompt": "based on the console output from the command summarize the console output and provide the user with helpful information about the task assuming that the task rent successfully  you should keep your answer less than one sentence but if for some reason there is errors or it doesn't execute correctly you need to find out why and  properly explain what happened  to the user so the user understands as well additionally for reference this batch script in the command runs a Gradle jar task",
+      "context": {
+        "command": "./gradlew :Editor:jar -x test",
+        "selection": false
+      }
+    },
+    "batch-script-run-jar": {
+      "description": "batch-script-run-jar",
+      "prompt": "based on the console output from the command summarize the console output and provide the user with helpful information about the task assuming that the task rent successfully  you should keep your answer less than one sentence but if for some reason there is errors or it doesn't execute correctly you need to find out why and  properly explain what happened  to the user so the user understands as well additionally for reference this batch script in the command runs a jar file",
+      "context": {
+        "command": "java -Xmx10g -Xms512m -XX:+UseG1GC -XX:+ExplicitGCInvokesConcurrent -jar D:\\Java-projects\\RSPSi-Editor\\Editor\\build\\libs\\Editor.jar",
+
+        "selection": false
+      }
+    },    
+    "explain-code-flow": {
+      "description": "Explain code flow for developers",
+      "prompt": "1. Break down the code in the current file into sections.\n2. Explain the logical flow of each section and how they contribute to the overall functionality.\n3. Assume the audience is an experienced programmer.",
+      "context": {
+        "currentFile": true
+      }
+    },
+    "explain-code-flow-directory": {
+      "description": "Explain code flow in directory",
+      "prompt": "1. Identify the files in the current directory.\n2. Explain the logical flow of the code in each file and how they contribute to the overall functionality.\n3. Include a clear heading indicating which directory the explanation is referring to.\n4. Assume the audience is an experienced programmer.",
+      "context": {
+        "currentDir": true
+      }
+    },
+    "explain-code-flow-open-tabs": {
+      "description": "Explain code flow in open tabs",
+      "prompt": "1. Identify the files in the currently open tabs.\n2. Explain the logical flow of the code in each file and how they contribute to the overall functionality.\n3. Include a clear heading indicating which open tabs the explanation is referring to.\n4. Assume the audience is an experienced programmer.",
+      "context": {
+        "openTabs": true
+      }
+    },
+    "explain-code-flow-non-dev": {
+      "description": "Explain code flow for non-developers",
+      "prompt": "1. Break down the code in the current file into sections.\n2. Explain the logical flow of each section and how they contribute to the overall functionality in simple terms.\n3. Assume the audience is not a developer and does not have a great understanding of the code.",
+      "context": {
+        "currentFile": true
+      }
+    },
+    "algorithm-analysis": {
+      "description": "Analyze algorithms in code",
+      "prompt": "1. Identify the algorithms used in the code.\n2. Analyze their efficiency in terms of time and space complexity.\n3. Explain how each algorithm achieves its intended purpose.",
+      "context": {
+        "openTabs": true
+      }
+    },
+    "error-handling-explanation": {
+      "description": "Explain error handling mechanisms",
+      "prompt": "1. Identify the error handling mechanisms in the code.\n2. Explain how potential issues are identified and addressed.\n3. Provide examples of error scenarios and how they are handled.",
+      "context": {
+        "currentFile": true
+      }
+    },
+    "concurrency-parallelism-overview": {
+      "description": "Overview of concurrency and parallelism",
+      "prompt": "1. Identify any concurrency or parallelism concepts used in the code.\n2. Explain their role in optimizing performance.\n3. Provide examples of how they are implemented.",
+      "context": {
+        "currentFile": true
+      }
+    },
+    "dependency-library-justification": {
+      "description": "Justify dependency and library choices",
+      "prompt": "1. Identify the external dependencies or libraries used in the code.\n2. Explain how they contribute to the project's goals.\n3. Justify why these dependencies were chosen over alternatives.",
+      "context": {
+        "selection": true,
+        "currentFile": true
+      }
+    },
+    "user-documentation-review": {
+      "description": "Review user documentation",
+      "prompt": "1. Evaluate the user documentation for the code.\n2. Identify areas that can be improved for better user understanding.\n3. Suggest improvements to enhance user experience.",
+      "context": {
+        "selection": true
+      }
+    },
+    "code-optimization-recommendations": {
+      "description": "Recommend code optimizations",
+      "prompt": "1. Identify opportunities for code optimization.\n2. Propose changes that can improve performance without sacrificing functionality.",
+      "context": {
+        "selection": true
+      }
+    },
+    "code-architecture-evaluation": {
+      "description": "Evaluate code architecture",
+      "prompt": "1. Evaluate the overall code architecture.\n2. Identify strengths, weaknesses, and potential improvements for better scalability and maintainability.",
+      "context": {
+        "selection": true,
+        "currentFile": true
+      }
+    },
+    "logging-strategy-review": {
+      "description": "Review logging strategy",
+      "prompt": "1. Review the logging strategy implemented in the code.\n2. Ensure it provides sufficient information for troubleshooting and debugging.\n3. Suggest improvements for a more effective logging strategy.",
+      "context": {
+        "selection": true,
+        "currentFile": true
+      }
+    },
+    "code-performance-optimization-tips": {
+      "description": "Provide code optimization tips",
+      "prompt": "1. Offer tips and techniques for optimizing code performance.\n2. Include algorithmic improvements, caching strategies, and resource management.\n3. Aim to enhance the overall efficiency of the code.",
+      "context": {
+        "selection": true
+      }
+    },
+    "code-documentation-navigation": {
+      "description": "Guide users on code documentation navigation",
+      "prompt": "1. Guide users on effective navigation through code documentation.\n2. Demonstrate how to find relevant information and understand code structure.\n3. Provide tips for using documentation for efficient coding.",
+      "context": {
+        "selection": true
+      }
+    },
+    "code-learning-resources": {
+      "description": "Provide code learning resources",
+      "prompt": "1. Compile a list of recommended learning resources, tutorials, and documentation to help users enhance their understanding of coding concepts and improve their skills.",
+      "context": {
+        "selection": true
+      }
+    },
+    "code-architecture-diagram": {
+      "description": "Generate code architecture diagram",
+      "prompt": "1. Generate a visual diagram illustrating the architecture of the code.\n2. Highlight major components, their interactions, and the overall flow of data or control within the system.",
+      "context": {
+        "selection": true
+      }
+    },
+    "code-error-message-improvement": {
+      "description": "Improve code error messages",
+      "prompt": "1. Identify areas where error messages can be improved within the code.\n2. Offer suggestions for clearer and more informative error messages to aid debugging and troubleshooting.",
+      "context": {
+        "selection": true
+      }
+    },
+    "code-quality-assessment": {
+      "description": "Assess code quality",
+      "prompt": "1. Conduct a comprehensive assessment of code quality in the provided code.\n2. Evaluate adherence to coding standards, identify potential code smells, and propose improvements for enhanced maintainability.",
+      "context": {
+        "selection": true
+      }
+    },
+    "code-performance-tuning": {
+      "description": "Tune code performance",
+      "prompt": "1. Analyze the code and provide suggestions for optimizing performance, including algorithmic improvements and resource management.",
+      "context": {
+        "selection": true
+      }
+    },
+    "code-memory-usage-analysis": {
+      "description": "Analyze code memory usage",
+      "prompt": "1. Evaluate memory usage patterns within the code.\n2. Propose strategies for efficient memory management.",
+      "context": {
+        "selection": true
+      }
+    },
+    "analyze-code-alignment": {
+      "description": "Analyze code alignment with surrounding classes",
+      "prompt": "1. Analyze the selected code to ensure that it properly aligns with the classes in the surrounding directory.\n2. If not, identify the files that do not properly align and explain the issue.\n3. Provide a separate paragraph with a heading named 'Here's my reasoning:' to explain your reasoning.",
+      "context": {
+        "selection": true,
+        "currentDir": true
+      }
+    },
+    "refactor-code": {
+      "description": "Refactor code for improvement",
+      "prompt": "1. Analyze the code in the same directory as the selected file.\n2. Suggest refactoring changes to improve code quality, performance, and maintainability.\n3. Explain the proposed changes and seek user confirmation before applying them.",
+      "context": {
+        "currentDir": true,
+        "selection": true
+      },
+      "mode": "edit"
+    },
+    "scan-for-issues": {
+      "description": "Scan code for potential issues",
+      "prompt": "1. Scan the code in the current directory for potential bugs, performance issues, security vulnerabilities, and code smells.\n2. Categorize and prioritize the identified issues based on severity and impact.",
+      "context": {
+        "currentDir": true
+      }
+    },
+    "explain-code-purpose": {
+      "description": "Explain code purpose and functionality",
+      "prompt": "1. Analyze the selected code and its relationship with the surrounding code in the directory.\n2. Provide a clear and concise explanation of the code's purpose, functionality, and how it fits into the overall project.",
+      "context": {
+        "selection": true,
+        "currentDir": true
+      }
+    },
+    "optimize-selected-code": {
+      "description": "Optimize selected code",
+      "prompt": "1. Analyze the selected code for potential performance improvements, code optimizations, and best practices.\n2. Suggest changes and seek user confirmation before applying them.",
+      "context": {
+        "selection": true,
+        "currentDir": true
+      },
+      "mode": "edit"
+    },
+    "adapt-code-style": {
+      "description": "Adapt code style to match surrounding code",
+      "prompt": "1. Analyze the selected code and adapt its style and conventions to match the surrounding code.\n2. Ensure consistency in naming conventions, formatting, and coding patterns.",
+      "context": {
+        "selection": true,
+        "currentDir": true
+      },
+      "mode": "edit"
+    }
+  }
+}

@@ -1,3 +1,8 @@
 *.class
-
+/output
 *.log
+logsCFR.txt
+logsFernflower.txt
+JarDecompilerFernflower.bat
+D:\JavaDecompilerAuto-Fernflower\JavaDecompilerAutomator\output\
+D:\JavaDecompilerAuto-Fernflower\JavaDecompilerAutomator\output\**\*
